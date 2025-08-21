@@ -1,12 +1,13 @@
+
+
 "use client";
 
+import ApplyFinanceStep from "@/components/steps-components/apply-finance/ApplyFinance";
 import Location from "@/components/steps-components/location/Location";
-import VehicleStep from "@/components/steps-components/vehicle-step/VehicleStep";
 import { addRequest } from "@/store/Feature/my-request";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import PickupAndDropOffStep from "../pickup-and-drop-off/page";
 
 export default function page() {
   const searchParams = useSearchParams();
@@ -20,8 +21,8 @@ export default function page() {
     data.current = { ...data.current, ...addedData };
   };
 
-  const handleAddTransportService = () => {
-    dispatch(addRequest({ ...data?.current, type: "transport" }));
+  const handleAddApplyFinanceService = () => {
+    dispatch(addRequest({ ...data?.current, type: "finance" }));
     router.push("/review-services");
   };
 
@@ -29,22 +30,22 @@ export default function page() {
     <div>
       {currentStep === "location" && (
         <Location
-          handleNext={() => setCurrentStep("add-vehicle")}
+          handleNext={() => setCurrentStep("apply-finance")}
           setData={addData}
           handlePrev={() => router.back()}
           data={data?.current?.locations}
         />
       )}
-      {currentStep === "add-vehicle" && (
-        <VehicleStep
-        data={data?.current?.vehicles}
-          setData={addData}
-          handleNext={() => handleAddTransportService()}
-          handlePrev={() => {
-            setCurrentStep("location");
-          }}
-        />
-      )}
+      {
+        currentStep === "apply-finance" && (
+          <ApplyFinanceStep
+            handleNext={handleAddApplyFinanceService}
+            handlePrev={() => setCurrentStep("location")}
+            setData={addData}
+            data={data?.current?.vehicles}
+          />
+        )
+      }
     </div>
   );
 }

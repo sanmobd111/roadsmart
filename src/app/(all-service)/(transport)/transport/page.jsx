@@ -29,7 +29,7 @@ const serviceCategories = [
     name: "Towing",
     icon: Wrench,
     color: "text-red-500",
-    services: [{ name: "Towing ", featured: true, url: "/transport" }],
+    services: [{ name: "Towing ", featured: true, url: "/towing" }],
   },
   {
     id: "Breadown Recovery  ",

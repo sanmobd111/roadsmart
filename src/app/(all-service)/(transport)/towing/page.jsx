@@ -1,12 +1,12 @@
 "use client";
 
 import Location from "@/components/steps-components/location/Location";
+import PickupAndDropOffStep from "@/components/steps-components/pickup-drop-off-step/PickupDropOffStep";
 import VehicleStep from "@/components/steps-components/vehicle-step/VehicleStep";
 import { addRequest } from "@/store/Feature/my-request";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import PickupAndDropOffStep from "../pickup-and-drop-off/page";
 
 export default function page() {
   const searchParams = useSearchParams();
