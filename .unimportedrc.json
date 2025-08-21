@@ -1,0 +1,14 @@
+{
+  "entry": ["src"],
+  "aliases": {
+    "@": "./src"
+  },
+  "ignorePatterns": [
+    "**/*.test.*",
+    "**/*.spec.*",
+    "**/*.stories.*"
+  ],
+  "ignoreUnimported": [
+    "src/app/**"
+  ]
+}
