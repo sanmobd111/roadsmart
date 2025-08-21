@@ -39,19 +39,10 @@ export default function page() {
         <VehicleStep
         data={data?.current?.vehicles}
           setData={addData}
-          handleNext={() => setCurrentStep("pickup-and-drop-off")}
+          handleNext={() => handleAddTransportService()}
           handlePrev={() => {
             setCurrentStep("location");
           }}
-        />
-      )}
-
-      {currentStep === "pickup-and-drop-off" && (
-        <PickupAndDropOffStep
-          handleNext={handleAddTransportService}
-          handlePrev={() => setCurrentStep("add-vehicle")}
-          setData={addData}
-          data={data?.current?.vehicles}
         />
       )}
     </div>

@@ -36,7 +36,7 @@ const serviceCategories = [
     name: "Breadown Recovery  ",
     icon: Wind,
     color: "text-blue-500",
-    services: [{ name: "Vehicle recovery ", url: "/breadown-recovery/location" }],
+    services: [{ name: "Vehicle recovery ", url: "/break-down-recovery" }],
   },
 ];
 
