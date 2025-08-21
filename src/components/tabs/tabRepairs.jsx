@@ -3,13 +3,13 @@ import BannerInputs from "../Home/BannerInputs";
 
 export default function TabRepairs() {
   const popularServices = [
-    { name: "General Diagnosis", path: "/repair/addvehicle" },
-    { name: "Tune up-scheduled maintenance", path: "/repair/addvehicle" },
-    { name: "Brake pads", path: "/repair/addvehicle" },
-    { name: "Check Engine Light", path: "/repair/addvehicle" },
-    { name: "Oil Change", path: "/repair/addvehicle" },
-    { name: "Transmission Flush", path: "/repair/addvehicle" },
-    { name: "Popular Services", path: "/repair/addvehicle" },
+    { name: "General Diagnosis", path: "/repair-service" },
+    { name: "Tune up-scheduled maintenance", path: "/repair-service" },
+    { name: "Brake pads", path: "/repair-service" },
+    { name: "Check Engine Light", path: "/repair-service" },
+    { name: "Oil Change", path: "/repair-service" },
+    { name: "Transmission Flush", path: "/repair-service" },
+    { name: "Popular Services", path: "/repair-service" },
     { name: "See All Repair Services", path: "/repair", isRedirect: true },
   ];
 

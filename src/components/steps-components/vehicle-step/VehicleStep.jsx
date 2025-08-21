@@ -67,7 +67,7 @@ export default function VehicleStep({ handleNext, handlePrev, setData, data }) {
                         <Image
                           src={carImg}
                           alt={vehicle.name}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain"
                           style={{
                             filter:
                               "hue-rotate(0deg) saturate(1.5) brightness(0.8)",

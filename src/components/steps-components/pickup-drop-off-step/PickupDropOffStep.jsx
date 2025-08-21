@@ -16,23 +16,30 @@ export default function PickupAndDropOffStep({
 }) {
   const [currentStep, setCurrentStep] = useState(1);
   const [locations, setLocations] = useState({ from: "", to: "" });
-  const selectedVehicles = useGetSelectedVehicle();
-  const localData = useRef(data || selectedVehicles);
 
-  const currentVehicle = selectedVehicles[currentStep - 1];
+  const currentVehicle = data[currentStep - 1];
+
 
   const handleSubmit = () => {
-    localData.current[currentStep - 1] = {
+    data[currentStep - 1] = {
       ...currentVehicle,
       ...locations,
     };
     setLocations({ from: "", to: "" });
-    if (currentStep === selectedVehicles.length) {
-      setData({ vehicles: localData.current });
+    if (currentStep === data.length) {
+      setData({ vehicles: data });
       handleNext();
       return;
     } else {
       setCurrentStep(currentStep + 1);
+    }
+  };
+
+  const handleBack = () => {
+    if (currentStep === 1) {
+      handlePrev();
+    } else {
+      setCurrentStep(currentStep - 1);
     }
   };
   return (
@@ -40,7 +47,7 @@ export default function PickupAndDropOffStep({
       <div>
         <ProgressIndicator
           className={"mt-10 w-[90%]"}
-          vehicles={selectedVehicles}
+          vehicles={data}
           currentStep={currentStep}
           drivers={[]}
         />
@@ -51,7 +58,7 @@ export default function PickupAndDropOffStep({
           >
             <BackButton
               className={"lg:-translate-x-[10vw] top-0"}
-              onclick={handlePrev}
+              onclick={handleBack}
             />
             Where to?
           </h1>
@@ -62,7 +69,7 @@ export default function PickupAndDropOffStep({
 
               {/* The input field for the pickup location. */}
               <input
-                value={locations.from}
+                value={currentVehicle.from || locations.from}
                 onChange={(e) =>
                   setLocations({ ...locations, from: e.target.value })
                 }
@@ -77,7 +84,7 @@ export default function PickupAndDropOffStep({
 
               {/* The input field for the pickup location. */}
               <input
-                value={locations.to}
+                value={currentVehicle.to || locations.to}
                 onChange={(e) =>
                   setLocations({ ...locations, to: e.target.value })
                 }

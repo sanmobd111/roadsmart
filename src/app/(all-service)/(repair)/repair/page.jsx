@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-// import Image from "next/image";
-// import Link from "next/link";
 
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -164,7 +162,7 @@ export default function RoadSmartServices() {
                   <div className="mt-10 mb-4  border-gray-200">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-8">
                       {category.services.map((service, index) => (
-                        <Link href={"/repair/location"} key={index} className="w-full block">
+                        <Link href={"/repair-service"} key={index} className="w-full block">
                           <Button
                             key={index}
                             variant={service.featured ? "default" : "outline"}

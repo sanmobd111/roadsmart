@@ -1,6 +1,6 @@
 "use client";
 
-import Location from "@/components/steps-components/location/Location";
+import Location from "@/components/steps-components/location-step/LocationStep";
 import VehicleStep from "@/components/steps-components/vehicle-step/VehicleStep";
 import { addRequest } from "@/store/Feature/my-request";
 import { useRouter, useSearchParams } from "next/navigation";

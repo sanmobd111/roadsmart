@@ -2,8 +2,8 @@
 
 "use client";
 
-import ApplyFinanceStep from "@/components/steps-components/apply-finance/ApplyFinance";
-import Location from "@/components/steps-components/location/Location";
+import ApplyFinanceStep from "@/components/steps-components/apply-finance-step/ApplyFinanceStep";
+import Location from "@/components/steps-components/location-step/LocationStep";
 import { addRequest } from "@/store/Feature/my-request";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useRef, useState } from "react";
