@@ -5,8 +5,7 @@ import ProgressIndicator from '@/components/progressIndicator/ProgressIndicator'
 import BackButton from '@/components/shared/back-button/BackButton';
 import Container from '@/components/shared/container/Container';
 import PrimaryBtn from '@/components/ui/PrimaryBtn';
-import SecondaryBtn from '@/components/ui/SecondaryBtn';
-import { setRequestedVehicle } from '@/store/Feature/request-data-slice';
+// import { setRequestedVehicle } from '@/store/Feature/request-data-slice';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -31,12 +30,12 @@ export default function coverage() {
 
   const handleNext = () => {
     if (currentStep === selectedVehicles.length + selectedDrivers.length) {
-      dispatch(setRequestedVehicle([...allSumInsured,
+      // dispatch(setRequestedVehicle([...allSumInsured,
         // ...allSelectedOptions, 
         //   { ...drivers[currentStep - selectedVehicles.length - 1], 
         //   selectedOption, type: "Plant-insurance-driver" 
         // }
-      ]));
+      // ]));
       router.push("/use-type")
       return
     } else if (currentStep <= selectedVehicles.length) {

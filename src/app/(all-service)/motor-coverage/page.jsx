@@ -33,7 +33,7 @@ export default function coverage() {
 
   const handleNext = () => {
     if (currentStep === selectedVehicles.length + selectedDrivers.length) {
-      dispatch(setRequestedVehicle([...allSumInsured,]));
+      // dispatch(setRequestedVehicle([...allSumInsured,]));
       router.push("/use-type")
       return
     } else if (currentStep <= selectedVehicles.length) {

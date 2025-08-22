@@ -5,7 +5,7 @@ import PrimaryBtn from '@/components/ui/PrimaryBtn';
 // import { Textarea } from '@/components/ui/TextArea';
 import BackButton from '@/components/shared/back-button/BackButton';
 import TextInput from '@/components/ui/TextInput';
-import { setRequestedVehicle } from '@/store/Feature/request-data-slice';
+// import { setRequestedVehicle } from '@/store/Feature/request-data-slice';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { CiLocationOn } from "react-icons/ci";
@@ -24,7 +24,7 @@ export default function page() {
 
 
   const handleSubmit = () => {
-    dispatch(setRequestedVehicle([{ manufacturer: item, location, designation, currency, details, numberOfItems, type: "marine-insurance" }]))
+    // dispatch(setRequestedVehicle([{ manufacturer: item, location, designation, currency, details, numberOfItems, type: "marine-insurance" }]))
     router.push("/review-services")
   }
 
