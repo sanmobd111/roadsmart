@@ -31,14 +31,14 @@ const serviceCategories = [
     icon: Wrench,
     color: "text-red-500",
     services: [
-      { name: "First Registration ", featured: true, url: "/compliance/location" },
-      { name: "Personalised Registration ", url: "/compliance/location" },
-      { name: "Vehicle De-registration ", url: "/compliance/location" },
-      { name: "Change Ownership   ", url: "/compliance/location" },
-      { name: "Change of Absolute Owner", url: "/compliance/location" },
-      { name: "Vehicle Re-registration", url: "/compliance/location" },
-      { name: "Registration of Ex-Registration ", url: "/compliance/location" },
-      { name: "Registration of Ex-Red Book", url: "/compliance/location" },
+      { name: "First Registration ", featured: true, url: "/compliance-service" },
+      { name: "Personalised Registration ", url: "/compliance-service" },
+      { name: "Vehicle De-registration ", url: "/compliance-service" },
+      { name: "Change Ownership   ", url: "/compliance-service" },
+      { name: "Change of Absolute Owner", url: "/compliance-service" },
+      { name: "Vehicle Re-registration", url: "/compliance-service" },
+      { name: "Registration of Ex-Registration ", url: "/compliance-service" },
+      { name: "Registration of Ex-Red Book", url: "/compliance-service" },
     ],
   },
   {
@@ -47,9 +47,9 @@ const serviceCategories = [
     icon: Wind,
     color: "text-blue-500",
     services: [
-      { name: "Change of Color", url: "/compliance/location" },
-      { name: "Change of Seating Capacity", url: "/compliance/location" },
-      { name: "Change of Engine ", url: "/compliance/location" },
+      { name: "Change of Color", url: "/compliance-service" },
+      { name: "Change of Seating Capacity", url: "/compliance-service" },
+      { name: "Change of Engine ", url: "/compliance-service" },
     ],
   },
   {
@@ -58,9 +58,9 @@ const serviceCategories = [
     icon: Zap,
     color: "text-yellow-500",
     services: [
-      { name: "Road Tax Renewal ", url: "road-tax/location" },
-      { name: "Fitness Renewal ", url: "fitness-renewal/location" },
-      { name: "Drivers license Renewal", url: "/compliance/location" },
+      { name: "Road Tax Renewal ", url: "road-tax" },
+      { name: "Fitness Renewal ", url: "fitness-renewal" },
+      { name: "Drivers license Renewal", url: "/compliance-service" },
     ],
   },
   {
@@ -69,8 +69,8 @@ const serviceCategories = [
     icon: Truck,
     color: "text-gray-600",
     services: [
-      { name: "Whitebook Replacement ", url: "/compliance/location" },
-      { name: "Drivers License Replacement", url: "/compliance/location" },
+      { name: "Whitebook Replacement ", url: "/compliance-service" },
+      { name: "Drivers License Replacement", url: "/compliance-service" },
     ],
   },
   {
@@ -79,9 +79,9 @@ const serviceCategories = [
     icon: Shield,
     color: "text-cyan-500",
     services: [
-      { name: "Cross Boarder Clearance ", url: "/compliance/location" },
-      { name: "Ex-Red Book Clearance ", url: "/compliance/location" },
-      { name: "Ex-GRZ Book Clearance ", url: "/compliance/location" },
+      { name: "Cross Boarder Clearance ", url: "/compliance-service" },
+      { name: "Ex-Red Book Clearance ", url: "/compliance-service" },
+      { name: "Ex-GRZ Book Clearance ", url: "/compliance-service" },
     ],
   },
 ];

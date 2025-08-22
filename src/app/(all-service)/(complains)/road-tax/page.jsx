@@ -1,7 +1,7 @@
 "use client";
 
+import QuatreStep from "@/components/steps-components/complaince/road-tax/quater-step/QuaterStep";
 import Location from "@/components/steps-components/location-step/LocationStep";
-import PickupAndDropOffStep from "@/components/steps-components/transport/pickup-drop-off-step/PickupDropOffStep";
 import VehicleStep from "@/components/steps-components/vehicle-step/VehicleStep";
 import { addRequest } from "@/store/Feature/my-request";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -21,7 +21,7 @@ export default function page() {
   };
 
   const handleAddTransportService = () => {
-    dispatch(addRequest({ ...data?.current, type: "transport" }));
+    dispatch(addRequest({ ...data?.current, type: "road-tax" }));
     router.push("/review-services");
   };
 
@@ -37,17 +37,17 @@ export default function page() {
       )}
       {currentStep === "add-vehicle" && (
         <VehicleStep
-        data={data?.current?.vehicles}
+          data={data?.current?.vehicles}
           setData={addData}
-          handleNext={() => setCurrentStep("pickup-and-drop-off")}
+          handleNext={() => setCurrentStep("quatre-step")}
           handlePrev={() => {
             setCurrentStep("location");
           }}
         />
       )}
 
-      {currentStep === "pickup-and-drop-off" && (
-        <PickupAndDropOffStep
+      {currentStep === "quatre-step" && (
+        <QuatreStep
           handleNext={handleAddTransportService}
           handlePrev={() => setCurrentStep("add-vehicle")}
           setData={addData}

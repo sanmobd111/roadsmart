@@ -11,7 +11,6 @@ import { MdArrowBackIos } from "react-icons/md";
 
 export default function AddNoteStep({ data, setData, handleNext, handlePrev }) {
   const [currentStep, setCurrentStep] = useState(1);
-  const router = useRouter();
   const [note, setNote] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -43,7 +42,7 @@ export default function AddNoteStep({ data, setData, handleNext, handlePrev }) {
 
   return (
     <div className="mt-10 flex items-center justify-center p-4">
-      <div className="w-full h-[70vh] mb-10 flex flex-col max-w-md bg-white rounded-lg">
+      <div className="w-full min-h-[70vh] mb-10 flex flex-col max-w-md bg-white rounded-lg">
         <div>
           <ProgressIndicator
             className={"mt-10 w-[90%]"}
@@ -80,7 +79,7 @@ export default function AddNoteStep({ data, setData, handleNext, handlePrev }) {
               </div>
 
               {/* Display Note if Available */}
-              {note && (
+              {currentVehicle?.note && (
                 <>
                   <div className="bg-[#fef2f24f] rounded-lg py-3 px-4 mb-4">
                     {/* Pick Up Button */}
@@ -93,7 +92,7 @@ export default function AddNoteStep({ data, setData, handleNext, handlePrev }) {
                         Edit
                       </button>
                     </div>
-                    <p className="text-gray-600 text-sm md:text-base">{note}</p>
+                    <p className="text-gray-600 text-sm md:text-base">{currentVehicle?.note}</p>
                   </div>
                 </>
               )}

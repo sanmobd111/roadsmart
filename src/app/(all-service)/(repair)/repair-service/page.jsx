@@ -1,8 +1,8 @@
 "use client";
 
-import AddNoteStep from "@/components/steps-components/add-note-step/AddNoteStep";
+import AddNoteStep from "@/components/steps-components/repair/add-note-step/AddNoteStep";
 import Location from "@/components/steps-components/location-step/LocationStep";
-import PickupAndDropOffStep from "@/components/steps-components/pickup-drop-off-step/PickupDropOffStep";
+import PickupAndDropOffStep from "@/components/steps-components/transport/pickup-drop-off-step/PickupDropOffStep";
 import VehicleStep from "@/components/steps-components/vehicle-step/VehicleStep";
 import { addRequest } from "@/store/Feature/my-request";
 import { useRouter, useSearchParams } from "next/navigation";

@@ -1,7 +1,6 @@
 "use client";
 
 import Location from "@/components/steps-components/location-step/LocationStep";
-import PickupAndDropOffStep from "@/components/steps-components/transport/pickup-drop-off-step/PickupDropOffStep";
 import VehicleStep from "@/components/steps-components/vehicle-step/VehicleStep";
 import { addRequest } from "@/store/Feature/my-request";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -20,8 +19,8 @@ export default function page() {
     data.current = { ...data.current, ...addedData };
   };
 
-  const handleAddTransportService = () => {
-    dispatch(addRequest({ ...data?.current, type: "transport" }));
+  const handleFitnessRenewalService = () => {
+    dispatch(addRequest({ ...data?.current, type: "compliance" }));
     router.push("/review-services");
   };
 
@@ -37,21 +36,12 @@ export default function page() {
       )}
       {currentStep === "add-vehicle" && (
         <VehicleStep
-        data={data?.current?.vehicles}
+          data={data?.current?.vehicles}
           setData={addData}
-          handleNext={() => setCurrentStep("pickup-and-drop-off")}
+          handleNext={handleFitnessRenewalService}
           handlePrev={() => {
             setCurrentStep("location");
           }}
-        />
-      )}
-
-      {currentStep === "pickup-and-drop-off" && (
-        <PickupAndDropOffStep
-          handleNext={handleAddTransportService}
-          handlePrev={() => setCurrentStep("add-vehicle")}
-          setData={addData}
-          data={data?.current?.vehicles}
         />
       )}
     </div>
