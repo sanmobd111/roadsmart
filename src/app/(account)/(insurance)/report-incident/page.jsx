@@ -38,16 +38,7 @@ function IncidentReport() {
     // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log({
-            incidentType,
-            vehicle,
-            incidentDate,
-            incidentTown,
-            damageType,
-            injuryLossOfLife,
-            description,
-            notifyInsurer,
-        });
+       
         // Add logic to save data or proceed to file a claim
     };
 

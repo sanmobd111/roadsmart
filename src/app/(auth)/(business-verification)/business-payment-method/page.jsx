@@ -52,11 +52,9 @@ export default function App() {
     ];
 
     const handleSignUp = () => {
-        console.log("Proceed clicked");
         router.push("/verify-message")
     }
     const handleSkip = () => {
-        console.log("Do it later clicked");
         router.push("/verify-message")
     }
 

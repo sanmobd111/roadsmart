@@ -21,7 +21,6 @@ export default function NewPasswordForm() {
     }
 
     if (newPassword !== confirmPassword) {
-      console.log("Passwords don't match")
       return
     }
 
@@ -29,7 +28,6 @@ export default function NewPasswordForm() {
 
     // Simulate API call to update password
     setTimeout(() => {
-      console.log("Password updated successfully")
       setIsLoading(false)
       // Here you would typically redirect to login or show success message
     }, 2000)

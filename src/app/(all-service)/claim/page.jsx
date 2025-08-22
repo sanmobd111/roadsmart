@@ -11,7 +11,6 @@ import { useDispatch, useSelector } from 'react-redux'
 export default function page() {
     const dispatch = useDispatch()
     const incidents = useSelector((state) => state?.claimServices?.claimServices?.incident)
-    console.log(incidents)
     const searchParams = useSearchParams();
     const [step, setStep] = useState(parseInt(searchParams.get("step")) || 1)
 

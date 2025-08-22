@@ -14,14 +14,13 @@ export default function page() {
     const dispatch = useDispatch()
     const damageDetails = useSelector((state) => state?.claimServices?.claimServices?.damage)
     const insuranceDetails = useSelector((state) => state?.claimServices?.claimServices?.insurance)
-    console.log(insuranceDetails, "insuranceDetails")
+    (insuranceDetails, "insuranceDetails")
     const [progressStep, setProgressStep] = useState(1)
     const router = useRouter()
     const vehicles = useSelector((state) => state?.vehicle?.vehicles);
     const selectedVehicles = vehicles.filter((vehicle) => vehicle.selected)
     const persons = useSelector((state) => state?.person?.persons);
     const selectedPersons = persons.filter((person) => person.selected)
-    console.log(selectedPersons, "selectedPersons")
     const [step, setStep] = useState(1)
 
 
@@ -30,7 +29,6 @@ export default function page() {
     }
 
     const handleAddDamageDetails = () => {
-        console.log(progressStep, selectedVehicles.length + selectedPersons.length, "progressStep")
         if (progressStep == selectedVehicles.length + selectedPersons.length) {
             router.push("/claim/driver")
             return
@@ -48,7 +46,6 @@ export default function page() {
         setProgressStep(progressStep - 1)
     }
 
-    console.log(step, "damageDetails")
     return (
         <Container className={"lg:!my-16"}>
             <div className=' w-fit mx-auto'>

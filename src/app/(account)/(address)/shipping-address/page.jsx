@@ -10,7 +10,6 @@ import MakePrimaryAddressModalContents from '@/components/modal-contents/address
 
 export default function page() {
     const [isModalOpen, setModalOpen] = useState(false);
-    console.log(isModalOpen)
     return (
         <Container className="lg:!my-16">
             <div className="w-full space-y-6 bg-white">

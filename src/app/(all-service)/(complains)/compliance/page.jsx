@@ -100,7 +100,6 @@ export default function RoadSmartServices() {
   };
 
   const routerHandlerSubmit = (url) => {
-    console.log(url);
 
     router.push(url)
   }

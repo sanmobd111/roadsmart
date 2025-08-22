@@ -16,7 +16,6 @@ export default function page() {
     const [date, setDate] = useState("")
     const handleCancel = () => {
         // Handle cancel action
-        console.log("Cancelled")
     }
 
     const handleConfirmAndBook = () => {

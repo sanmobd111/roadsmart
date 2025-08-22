@@ -35,8 +35,8 @@ const serviceCategories = [
     icon: Wrench,
     color: "text-red-500",
     services: [
-      { name: "Motor Insurance", featured: true, path: "/insurance-motor/location" },
-      { name: "Plant Insurance", path: "/insurance-plants/location" },
+      { name: "Motor Insurance", featured: true, path: "/motor-insurance" },
+      { name: "Plant Insurance", path: "/plant-insurance" },
       { name: "Marine Insurance ", path: "/consignment-details" },
     ],
   },

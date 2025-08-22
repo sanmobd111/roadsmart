@@ -2,7 +2,7 @@ import combinedClasses from "@/utils/tailwind"
 import { X, ChevronRight } from "lucide-react"
 import { FaCheck } from "react-icons/fa6"
 
-export default function StepProgressbar2({ progress, handleNext, handlePrev, disabled, containerClassName, isLastStep, handleAddVehicle, currentStep, setValueOfStep, hasBackBtn }) {
+export default function StepProgressbar2({ progress, handleNext, handlePrev, disabled, containerClassName, isLastStep, handleAddVehicle, hasBackBtn }) {
 
     return (
         <div className={combinedClasses("w-[90%] max-w-md mx-auto", containerClassName)}>

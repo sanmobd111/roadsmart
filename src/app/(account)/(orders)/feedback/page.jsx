@@ -24,7 +24,6 @@ export default function page() {
 
 function ServiceCard() {
     const handleServiceClick = () => {
-        console.log("Air con service clicked")
     }
 
     return (
@@ -79,7 +78,7 @@ function FeedbackForm() {
     }
 
     const handleSubmit = () => {
-        console.log("Feedback submitted:", feedback)
+        ("Feedback submitted:", feedback)
         // Handle feedback submission
     }
 
@@ -119,7 +118,6 @@ import FileUpload from '@/components/shared/file-upload/FileUpload';
 
 function PhotoUpload() {
     const handleShareFeedback = () => {
-        console.log("Share feedback clicked")
     }
 
     return (

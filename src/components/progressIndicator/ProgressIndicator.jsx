@@ -37,7 +37,7 @@ export default function ProgressIndicator({
               <LiaUserShieldSolid
                 className={cn(
                   'w-8 h-8 lg:w-14 lg:h-14',
-                  currentStep >= index + 1 ? 'text-gray-black' : 'text-gray-400'
+                  currentStep == index + 1 ? 'text-gray-black' : 'text-gray-400'
                 )}
               />
               {

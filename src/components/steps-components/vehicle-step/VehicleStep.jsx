@@ -178,7 +178,10 @@ export default function VehicleStep({ handleNext, handlePrev, setData, data }) {
             {vehicles.length > 0 && (
               <Button
                 onClick={() => {
-                  setData({ vehicles: vehicles });
+                  setData({
+                    selectedVehicles: vehicles.filter((v) => v.selected),
+                    allVehicles: vehicles,
+                  });
                   handleNext();
                 }}
                 className="bg-primary w-1/3 m-auto flex mt-8 hover:bg-primary text-white px-8 py-3 lg:py-6 rounded-lg font-medium"

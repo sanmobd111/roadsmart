@@ -54,7 +54,6 @@ export default function App() {
                     </Button>
                 </div>
             </div>
-            {console.log(step)}
             <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
                 {/* {
                     step === "methods" && <AddPaymentMethodModalContents setStep={setStep} />

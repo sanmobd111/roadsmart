@@ -37,7 +37,7 @@ export default function page() {
       )}
       {currentStep === "add-vehicle" && (
         <VehicleStep
-          data={data?.current?.vehicles}
+          data={data?.current?.allVehicles}
           setData={addData}
           handleNext={() => setCurrentStep("quatre-step")}
           handlePrev={() => {
@@ -45,13 +45,12 @@ export default function page() {
           }}
         />
       )}
-
       {currentStep === "quatre-step" && (
         <QuatreStep
           handleNext={handleAddTransportService}
           handlePrev={() => setCurrentStep("add-vehicle")}
           setData={addData}
-          data={data?.current?.vehicles}
+          data={data?.current?.selectedVehicles}
         />
       )}
     </div>

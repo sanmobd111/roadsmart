@@ -16,7 +16,6 @@ export default function page() {
     const [progressStep, setProgressStep] = useState(selectedVehicles.length + 1)
     const license = useSelector((state) => state?.claimServices?.claimServices?.license)
     const natureOfAccident = useSelector((state) => state?.claimServices?.claimServices?.natureOfAccident)
-    console.log(natureOfAccident, "natureOfAccident")
 
     const [step, setStep] = useState(1)
     // const [driver, setDriver] = useState([])
@@ -25,7 +24,6 @@ export default function page() {
     }
 
     const handleAddDriverDetails = () => {
-        console.log(progressStep, "progressStep")
         if (progressStep === selectedPersons.length + selectedVehicles.length) {
             router.push("/claim/upload-document")
         } else {
@@ -40,7 +38,6 @@ export default function page() {
         // setProgressStep(progressStep - 1)
     }
 
-    console.log(selectedPersons[progressStep - selectedVehicles.length - 1], "selectedPersons[progressStep - selectedVehicles.length - 1]")
     return (
         <div className="my-10 lg:my-16">
             <ProgressIndicator vehicles={selectedVehicles} currentStep={progressStep} drivers={selectedPersons} />

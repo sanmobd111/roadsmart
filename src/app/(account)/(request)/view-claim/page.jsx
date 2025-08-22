@@ -184,11 +184,9 @@ function StatusTracking({ moreActions }) {
     ]
 
     const handleTrackJob = () => {
-        console.log("Track job clicked")
     }
 
     const handleViewInspection = () => {
-        console.log("View inspection clicked")
     }
     const toggleExpanded = (itemId) => {
         setExpandedItems((prev) => (prev.includes(itemId) ? prev.filter((id) => id !== itemId) : [...prev, itemId]))

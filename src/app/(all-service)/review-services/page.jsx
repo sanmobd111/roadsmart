@@ -11,7 +11,6 @@ import { useSelector } from 'react-redux';
 
 const App = () => {
     const requestedVehicles = useSelector((state) => state?.myRequests?.myRequests);
-    console.log(requestedVehicles, "requestedVehicles")
     const router = useRouter();
 
     // Reusable component for the detail rows
@@ -187,7 +186,6 @@ const RoadTax = ({ details }) => {
 }
 
 const FitnessRenewal = ({ details }) => {
-    console.log(details)
     const formatDate = (date) => {
         if (!date) return "";
         const d = new Date(date);
@@ -204,7 +202,6 @@ const FitnessRenewal = ({ details }) => {
 }
 
 const MotorInsurance = ({ details }) => {
-    console.log(details)
     const formatDate = (date) => {
         if (!date) return "";
         const d = new Date(date);
@@ -221,7 +218,6 @@ const MotorInsurance = ({ details }) => {
 }
 
 const MarineInsurance = ({ details }) => {
-    console.log(details)
     const formatDate = (date) => {
         if (!date) return "";
         const d = new Date(date);
@@ -243,7 +239,6 @@ const MarineInsurance = ({ details }) => {
 
 
 const KeyValuePair = ({ label, value }) => {
-    console.log(label, value)
     return (
         <div className="flex items-center space-x-3 font-medium my-2">
             <p className='text-gray'>{label}</p>
@@ -263,7 +258,6 @@ const Transport = ({ details }) => {
 }
 
 const Finance = ({ details }) => {
-    console.log(details)
     return (
         <div className='grid grid-cols-2'>
             <KeyValuePair label="Item" value={details.manufacturer} />

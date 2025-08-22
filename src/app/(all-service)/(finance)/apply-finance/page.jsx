@@ -42,7 +42,7 @@ export default function page() {
             handleNext={handleAddApplyFinanceService}
             handlePrev={() => setCurrentStep("location")}
             setData={addData}
-            data={data?.current?.vehicles}
+            data={data?.current?.selectedVehicles}
           />
         )
       }

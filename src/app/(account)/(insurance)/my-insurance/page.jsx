@@ -71,11 +71,9 @@ function InsurancePolicies() {
     ]
 
     const handleSubmitClaim = (policyId) => {
-        console.log(`Submit claim for policy ${policyId}`)
     }
 
     const handleViewDetails = (policyId) => {
-        console.log(`View details for policy ${policyId}`)
     }
 
     return (
@@ -165,11 +163,9 @@ function ClaimPolicies() {
     ]
 
     const handleSubmitClaim = (policyId) => {
-        console.log(`Submit claim for policy ${policyId}`)
     }
 
     const handleViewDetails = (policyId) => {
-        console.log(`View details for policy ${policyId}`)
     }
 
     return (
@@ -253,11 +249,9 @@ function Incidents() {
     ]
 
     const handleSubmitClaim = (policyId) => {
-        console.log(`Submit claim for policy ${policyId}`)
     }
 
     const handleViewDetails = (policyId) => {
-        console.log(`View details for policy ${policyId}`)
     }
 
     return (

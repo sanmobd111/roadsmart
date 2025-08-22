@@ -66,12 +66,10 @@ export default function Component() {
     };
 
     const handleEdit = () => {
-        console.log("Edit clicked")
         // Handle edit action
     }
 
     const handleConfirm = () => {
-        console.log("Confirm clicked")
         // Handle confirm action
     }
 

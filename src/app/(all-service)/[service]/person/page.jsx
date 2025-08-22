@@ -69,7 +69,6 @@ export default function page() {
         4: 66
     }
     const togglePersonForService = (personId) => {
-        console.log(personId, "deviceId")
         dispatch(selectPerson({ id: personId }));
     }
 

@@ -19,7 +19,6 @@ export default function Message() {
     const [currentEditContent, setCurrentEditContent] = useState("");
     const [currentModalContent, setCurrentModalContent] = useState("");
     const [isModalOpen, setIsModalOpen] = useState(false);
-    console.log(currentEditContent)
     return (
         <Container className="">
             <div className="space-y-8 w-full">

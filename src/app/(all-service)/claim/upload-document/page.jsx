@@ -15,7 +15,6 @@ export default function page() {
     const [editId, setEditId] = useState(null)
     const router = useRouter()
 
-    console.log(file, "file")
 
     const handleEdit = (editId) => {
         setEditId(editId)

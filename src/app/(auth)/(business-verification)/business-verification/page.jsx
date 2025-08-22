@@ -21,11 +21,9 @@ import { useRouter } from 'next/navigation';
 export default function App() {
     const router = useRouter();
     const handleSubmit = () => {
-        console.log("Proceed clicked");
         router.push("/business-payment-method")
     }
     const handleSkip = () => {
-        console.log("Do it later clicked");
         router.push("/business-payment-method")
     }
     return (
@@ -140,7 +138,6 @@ function FileInput() {
         if (file) {
             setFileName(file.name);
             // You can also handle the file upload logic here, e.g., send to server
-            console.log('Selected file:', file);
         } else {
             setFileName('');
         }

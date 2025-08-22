@@ -18,7 +18,6 @@ import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 export default function page() {
-    console.log("first")
     const drivers = useSelector((state) => state?.driver?.drivers);
     const router = useRouter();
     const dispatch = useDispatch();
@@ -135,7 +134,6 @@ export default function page() {
     }
 
     const toggleDriverForService = (driverId) => {
-        console.log(driverId, "deviceId")
         dispatch(selectDriver({ id: driverId }));
     }
 
@@ -215,11 +213,10 @@ export default function page() {
 
                             {
                                 step === 3 && <DriverWrapper title={"What’s the status of Betty’s license?"}>
-                                    {/* {console.log(suggestions.status)} */}
                                     <SelectInput2 label={"Choose Status"} placeholder={"status"} setValue={setStatus} value={status} options={suggestions.status} />
                                 </DriverWrapper>
                             }
-                            {console.log(validity)}
+                            {(validity)}
                             {
                                 step === 4 && <DriverWrapper title={"How long have they been licensed?"}>
                                     <SelectInput2 label={"Choose Status"} placeholder={"select"} setValue={setValidity} value={validity} options={suggestions.year} />

@@ -116,7 +116,6 @@ export default function Component() {
         setCurrentServiceModal("")
     }
 
-    console.log(isGetSpaceOpen)
     return (
         <div className="max-w-[1600px] mx-auto">
             <Path className={"lg:!text-lg"}><Link href={"/account"}>Your Account</Link> › Your Vehicles</Path>

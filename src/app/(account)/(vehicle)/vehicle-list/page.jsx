@@ -72,7 +72,6 @@ export default function Component() {
   }
 
   const handleVehicleClick = (vehicleId) => {
-    console.log("Vehicle clicked:", vehicleId)
   }
 
   const handlePreviousPage = () => {

@@ -29,7 +29,6 @@ export default function page() {
   }
 
   const handlePrev = () => {
-    console.log("first")
     router.back();
   };
   return (

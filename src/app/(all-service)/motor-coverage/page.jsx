@@ -46,7 +46,6 @@ export default function coverage() {
     setCurrentStep(currentStep + 1)
   }
 
-  console.log(allSumInsured, "allSumInsured")
 
   const handlePrev = () => {
     if (currentStep === 1) {

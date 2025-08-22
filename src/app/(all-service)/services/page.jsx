@@ -49,7 +49,6 @@ export default function RoadSmartServicesPage() {
   ];
 
   const handelRoute = (href) => {
-    console.log(href)
     router.push(href);
   };
 

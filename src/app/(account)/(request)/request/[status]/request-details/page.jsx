@@ -450,7 +450,7 @@ function DocumentModalContents() {
 
     const handleFileRetry = (id) => {
         // In a real app, you'd trigger the upload process again for this file
-        console.log(`Retrying upload for file ID: ${id}`);
+        (`Retrying upload for file ID: ${id}`);
         setFiles(files.map(file =>
             file.id === id ? { ...file, statusText: 'Uploading...', progress: 0, canRetry: false } : file
         ));

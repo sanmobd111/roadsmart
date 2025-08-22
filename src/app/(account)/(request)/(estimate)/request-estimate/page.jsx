@@ -45,7 +45,6 @@ export default function Page() {
     const selectedVendors = vendors.filter((v) => v.isSelected)
 
     const handleSubmit = () => {
-        console.log("Selected vendors:", selectedVendors)
     }
 
     const handleScroll = () => {

@@ -9,12 +9,10 @@ import { useRouter } from "next/navigation";
 export default function VerificationLandingPage() {
   const router = useRouter();
   const handleCheckStatus = () => {
-    console.log("Check status clicked")
     // router.push("/verify-status")
   }
 
   const handleStartBrowsing = () => {
-    console.log("Start browsing clicked")
   }
 
   return (

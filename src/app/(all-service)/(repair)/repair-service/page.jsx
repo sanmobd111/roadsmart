@@ -38,7 +38,7 @@ export default function page() {
       )}
       {currentStep === "add-vehicle" && (
         <VehicleStep
-          data={data?.current?.vehicles}
+          data={data?.current?.allVehicles}
           setData={addData}
           handleNext={() => setCurrentStep("pickup-and-drop-off")}
           handlePrev={() => {
@@ -52,7 +52,7 @@ export default function page() {
           handleNext={handleAddTransportService}
           handlePrev={() => setCurrentStep("add-vehicle")}
           setData={addData}
-          data={data?.current?.vehicles}
+          data={data?.current?.selectedVehicles}
         />
       )}
     </div>

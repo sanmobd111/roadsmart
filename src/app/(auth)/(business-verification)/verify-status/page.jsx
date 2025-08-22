@@ -24,19 +24,15 @@ export default function BusinessVerificationDashboard() {
   }
 
   const handleSubmitDocuments = () => {
-    console.log("Submitting documents:", uploadedFiles)
   }
 
   const handleSubmitInvitation = () => {
-    console.log("Submitting invitation code:", invitationCode)
   }
 
   const handleEditInformation = () => {
-    console.log("Edit information clicked")
   }
 
   const handleStartBrowsing = () => {
-    console.log("Start browsing clicked")
   }
 
   return (
@@ -200,7 +196,6 @@ function FileInput() {
     if (file) {
       setFileName(file.name);
       // You can also handle the file upload logic here, e.g., send to server
-      console.log('Selected file:', file);
     } else {
       setFileName('');
     }
